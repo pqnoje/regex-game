@@ -1,2 +1,2 @@
-# regex-game
+# /regex-game/
 Game criado para desenvolvedores
