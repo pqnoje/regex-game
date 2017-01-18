@@ -1,0 +1,21 @@
+<ion-header>
+	<ion-navbar>
+		<ion-title>Level 1</ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+	<div class="container">
+		<form (ngSubmit)="onSubmit()" #gameForm="ngForm">			
+			<label for="expressions" *ngFor="let regex of getChalangeExpressions().chalangeRegularExpressionsX.getExpressions(); let i = index">{{regex}}</label>					
+			<div class="form-group" >
+				<input type="text" class="form-control" id="expressions" 
+				[(ngModel)]="getGame().getInputExpressions()[0]" name="expressions" #expressions="ngModel" >
+			</div>
+			<label for="expressions" *ngFor="let regex of getChalangeExpressions().chalangeRegularExpressionsY.getExpressions(); let i = index">{{regex}}</label>	
+
+			<button type="button" class="btn btn-default" [disabled]="!gameForm.form.valid" (click)="check()">Check</button>
+		</form>
+		<div>{{getGame().getValidity()}}</div>			
+	</div>
+</ion-content>
