@@ -7,14 +7,13 @@ import { GamePage } from '../game/game';
 	selector: 'page-home',
 	templateUrl: 'home.html'
 })
+
 export class HomePage {
+	private navController
 
-	constructor(public navCtrl: NavController) {
-
+	constructor(navController: NavController) {
+		this.navController = navController
 	}
 
-	newGame() {
-		this.navCtrl.push(GamePage)
-	}
-
+	newGame = () => this.navController.push(GamePage)
 }
