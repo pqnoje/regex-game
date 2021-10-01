@@ -1,2 +1,2 @@
 # /regex-game/
-Game criado para desenvolvedores
+Game para gamificar *. Firmeza?
